@@ -1,0 +1,5 @@
+[d, o, e, y, l, o, t, y, l]
+[m, x, b, e, q, k, x, u, o, f]
+[n, b, i, a, n, k]
+[k, x, o]
+[r, v, p, l, o]

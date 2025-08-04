@@ -1,0 +1,1 @@
+[Fanatiki, Fundamentalisti, Radikalci, Ekstremisti]
