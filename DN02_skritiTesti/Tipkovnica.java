@@ -97,8 +97,6 @@ public class Tipkovnica {
         start = start * start;
         int layerLen = layer * 2;
         int maxLayer = findLayer((d) * (d) - 1, d);
-
-        int col, row;
         int side = 0;
         int start2 = start;
         for(int i = 1; i <= 4; i++) {
