@@ -2,7 +2,11 @@
 public class Volitve {
 
     public static void main(String[] args) {
-        // dopolnite po potrebi ...
+        char a = 'c';
+        char b = '0';
+        System.out.println((int)b);
+  
+        
     }
 
     public static int steviloGlasov(int[][][] t, int leto, int stranka) {
