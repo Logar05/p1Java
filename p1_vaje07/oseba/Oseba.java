@@ -53,5 +53,9 @@ public class Oseba {
         if(os.oce == this) return true;
         if(os.oce == null) return false;
         return jeOcetovskiPrednikOd(os.oce);
+    }
+    public char vrniSpol() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'vrniSpol'");
     }   
 }
