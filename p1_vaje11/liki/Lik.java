@@ -40,7 +40,7 @@ public abstract class Lik implements Comparable <Lik> {
         return new primerjalnikPoTipu();
     }
 
-    // Vrne vrsto lika <this> (npr. "pravokotnik").
+    // Vrne vrsto lika  his> (npr. "pravokotnik").
     public abstract String vrsta();
 
     // Vrne niz s podatki o liku <this> 
