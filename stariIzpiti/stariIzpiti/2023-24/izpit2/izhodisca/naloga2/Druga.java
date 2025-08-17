@@ -24,8 +24,16 @@ public class Druga {
     }
 
     public static int[][] visine(int[][] rel, int[][] smer) {
-        // popravite / dopolnite ...
-        return null;
+        int [][] visine = new int [rel.length][rel[0].length];
+        for(int i = 0; i < visine.length; i++) {
+            for(int j = 0; j < visine[i].length; j++) {
+                if(i == 0 && j == 0) continue;
+                int direction = smer[i][j];
+                if(direction == 1) visine[i][j] = visine[i][j - 1] + rel[i][j];
+                if(direction == 2) visine[i][j] = visine[i - 1][j] + rel[i][j];
+            }
+        }
+        return visine;
     }
 
     // pomo"zne metode, notranji razredi (po potrebi) ...

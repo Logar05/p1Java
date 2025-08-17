@@ -6,20 +6,21 @@ public class Prva {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int st = n;
-        while (!obilno(st)) {
-            st++;
+        while(true) {
+            if(jeObilno(n)) {
+                System.out.println(n);
+                break;
+            }
+            n++;
         }
-        System.out.println(st);
     }
 
-    public static boolean obilno(int n) {
-        int vsota = 0;
-        for (int i = 1;  i <= n / 2;  i++) {
-            if (n % i == 0) {
-                vsota += i;
-            }
+    public static boolean jeObilno(int n) {
+        int lim = n / 2;
+        int sum = 1;
+        for(int i = 2; i <= lim; i++) {
+            if(n % i == 0) sum += i;
         }
-        return (vsota > n);
+        return n < sum;
     }
 }

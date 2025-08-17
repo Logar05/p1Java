@@ -34,17 +34,16 @@ public class Cetrta {
         }
         Collections.sort(stranke);
         System.out.print('[');
-        int count = 1;
+        int count = 0;
         for (Stranka stranka : stranke) {
             if(stranke.size() == count) {
                 System.out.print(stranka.vrniIme());
-                System.out.println(']');
                 break;
             }
             count++;
             System.out.printf("%s, ", stranka.vrniIme());
         }
-    
+        System.out.println(']');
     }
 
     public static class Stranka implements Comparable<Stranka> {
