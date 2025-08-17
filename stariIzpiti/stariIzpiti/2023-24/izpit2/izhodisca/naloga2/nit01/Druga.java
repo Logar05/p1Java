@@ -31,10 +31,31 @@ public class Druga {
                 int direction = smer[i][j];
                 if(direction == 1) visine[i][j] = visine[i][j - 1] + rel[i][j];
                 if(direction == 2) visine[i][j] = visine[i - 1][j] + rel[i][j];
-                
+                if(direction == 3) visine[i][j] = rekVisine(visine, i , j + 1, smer, rel, direction) + rel[i][j];
+                if(direction == 4) visine[i][j] = rekVisine(visine, i + 1, j, smer, rel, direction) + rel[i][j];
             }
         }
         return visine;
+    }
+
+    public static int rekVisine(int [][] visine, int i, int j, int[][] smer, int[][] rel, int direction) {
+        direction = smer[i][j];
+        if(visine[i][j] != 0) {
+            return visine[i][j];
+        }
+        if(direction == 3) {
+            return visine[i][j] = rekVisine(visine, i, j + 1, smer, rel, direction) + rel[i][j];
+        }
+        if(direction == 4) {
+            return visine[i][j] = rekVisine(visine, i + 1, j, smer, rel, direction) + rel[i][j];
+        }
+        if(direction == 1) {
+            return visine[i][j] = rekVisine(visine, i, j - 1, smer, rel, direction) + rel[i][j];
+        }
+        if(direction == 2) {
+            return visine[i][j] = rekVisine(visine, i - 1, j, smer, rel, direction) + rel[i][j];
+        }
+        return 0;
     }
 
     // pomo"zne metode, notranji razredi (po potrebi) ...
